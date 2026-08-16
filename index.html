@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>코인 카 러시</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="game-card" aria-label="코인 카 러시 게임">
+      <header>
+        <div><p class="eyebrow">ENDLESS HIGHWAY</p><h1>코인 카 러시</h1></div>
+        <button id="pauseButton" class="icon-button" aria-label="일시정지">Ⅱ</button>
+      </header>
+      <div class="stats" aria-live="polite">
+        <div><span>코인</span><strong id="coins">0</strong></div>
+        <div><span>점수</span><strong id="score">0</strong></div>
+        <div><span>속도</span><strong id="speed">1.0x</strong></div>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="720" height="900" aria-label="자동차 게임 화면"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="panel">
+            <p class="eyebrow">READY, DRIVER?</p>
+            <h2 id="overlayTitle">코인을 모으고<br>끝까지 달리세요</h2>
+            <p id="overlayText">A / D 또는 ← / → 키로 차를 움직이세요.<br>장애물을 피하고 코인을 획득하세요!</p>
+            <button id="startButton" class="primary-button">게임 시작</button>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="controls"><kbd>A</kbd><kbd>D</kbd><span>또는</span><kbd>←</kbd><kbd>→</kbd><span>좌우 이동</span></div>
+        <button id="boostButton" class="boost-button">⚡ 터보: 5 코인 필요 <small>(Space)</small></button>
+      </footer>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
